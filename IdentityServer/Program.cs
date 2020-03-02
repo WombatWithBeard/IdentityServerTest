@@ -1,5 +1,4 @@
-using System.Transactions;
-using Microsoft.AspNetCore.Builder;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,10 +14,13 @@ namespace IdentityServer
 
             using (var scope = host.Services.CreateScope())
             {
+                var user = new IdentityUser("bob");
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-                userManager.CreateAsync(new IdentityUser("bob"), "pass123").GetAwaiter().GetResult();
-            }
-            
+                userManager.CreateAsync(user, "pass123").GetAwaiter().GetResult();
+                //optional
+                userManager.AddClaimAsync(user, new Claim("rc.grandma", "big.cookie")).GetAwaiter().GetResult();
+            }     
+
             host.Run();
         }
 

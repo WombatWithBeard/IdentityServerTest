@@ -21,7 +21,6 @@ C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\WebClient.TagHelpers.output.cache
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\WebClient.RazorCoreGenerate.cache
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -33,3 +32,12 @@ C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\WebClient.dll
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\WebClient.pdb
 C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\WebClient.csproj.CopyComplete
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\Secret.cshtml.g.cs

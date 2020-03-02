@@ -52,12 +52,18 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include" />
+        <e p="Context" t="Include">
+          <e p="IdentityContext.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AuthController.cs" t="Include" />
+        </e>
         <e p="IdentityServer.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="IdentityServer.AssemblyInfo.cs" t="Include" />
+              <e p="IdentityServer.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -69,6 +75,13 @@
         <e p="tempkey.rsa" t="Include" />
         <e p="Utilities" t="Include">
           <e p="Config.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewImports.cshtml.cs" t="Include" />
+          <e p="Auth" t="Include">
+            <e p="Login.cshtml" t="Include" />
+          </e>
         </e>
       </e>
       <e p="IdentityServerTest.sln" t="IncludeFlat" />
@@ -101,7 +114,7 @@
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
-            <e p="Privacy.cshtml" t="Include" />
+            <e p="Secret.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />

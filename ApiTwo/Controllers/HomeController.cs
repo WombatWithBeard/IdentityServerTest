@@ -1,7 +1,5 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
-using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
 

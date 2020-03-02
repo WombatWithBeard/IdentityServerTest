@@ -6,7 +6,17 @@ namespace IdentityServer.Utilities
 {
     public static class Config
     {
-        public static IEnumerable<ApiResource> GetApis() => new List<ApiResource> {new ApiResource("ApiOne")};
+        public static IEnumerable<IdentityResource> GetIdentityResources() => new List<IdentityResource>
+        {
+            new IdentityResources.OpenId(),
+            new IdentityResources.Profile()
+        };
+
+        public static IEnumerable<ApiResource> GetApis() => new List<ApiResource>
+        {
+            new ApiResource("ApiOne"),
+            new ApiResource("ApiTwo")
+        };
 
         public static IEnumerable<Client> GetClients() => new List<Client>
         {
@@ -17,6 +27,22 @@ namespace IdentityServer.Utilities
 
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 AllowedScopes = {"ApiOne"}
+            },
+            new Client
+            {
+                ClientId = "client_id_mvc",
+                ClientSecrets = {new Secret("client_secret_mvc".ToSha256())},
+                RedirectUris = {"https://localhost:44343/signin-oidc"},
+
+                AllowedGrantTypes = GrantTypes.Code,
+                AllowedScopes =
+                {
+                    "ApiOne", 
+                    "ApiTwo", 
+                    IdentityServer4.IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServer4.IdentityServerConstants.StandardScopes.Profile
+                },
+                RequireConsent = false
             }
         };
     }

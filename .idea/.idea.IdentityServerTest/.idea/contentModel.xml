@@ -76,11 +76,16 @@
         <e p="Utilities" t="Include">
           <e p="Config.cs" t="Include" />
         </e>
+        <e p="ViewModels" t="Include">
+          <e p="LoginViewModel.cs" t="Include" />
+          <e p="RegisterViewModel.cs" t="Include" />
+        </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewImports.cshtml.cs" t="Include" />
           <e p="Auth" t="Include">
             <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
           </e>
         </e>
       </e>

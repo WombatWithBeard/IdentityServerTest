@@ -1,4 +1,5 @@
-﻿@model LoginViewModel
+﻿@model IdentityServer.ViewModels.LoginViewModel
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
 
 <form asp-controller="Auth" asp-action="Login" method="post">
     <input type="hidden" asp-for="ReturnUrl"/>
@@ -12,5 +13,8 @@
     </div>
     <div>
         <button type="submit">Sign In</button>
+    </div>
+    <div>
+        <a asp-controller="Auth" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
     </div>
 </form>

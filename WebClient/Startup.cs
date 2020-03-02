@@ -30,6 +30,9 @@ namespace WebClient
                     config.ClientSecret = "client_secret_mvc";
                     config.SaveTokens = true;
                     config.ResponseType = "code";
+                    
+                    //configure scope
+                    config.Scope.Add("rc.scope");
                 });
 
             services.AddControllersWithViews();

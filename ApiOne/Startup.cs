@@ -19,7 +19,7 @@ namespace ApiOne
         {
             services.AddAuthentication("Bearer").AddJwtBearer("Bearer", config =>
             {
-                config.Authority = "https://localhost:44383/";
+                config.Authority = "https://localhost:4501/";
                 config.Audience = "ApiOne";
             });
 

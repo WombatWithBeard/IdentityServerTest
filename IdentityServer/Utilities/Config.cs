@@ -22,7 +22,7 @@ namespace IdentityServer.Utilities
 
         public static IEnumerable<ApiResource> GetApis() => new List<ApiResource>
         {
-            new ApiResource("ApiOne"),
+            new ApiResource("ApiOne", new []{"rc.apione.grandma"}),
             new ApiResource("ApiTwo")
         };
 
@@ -40,7 +40,7 @@ namespace IdentityServer.Utilities
             {
                 ClientId = "client_id_mvc",
                 ClientSecrets = {new Secret("client_secret_mvc".ToSha256())},
-                RedirectUris = {"https://localhost:44343/signin-oidc"},
+                RedirectUris = {"https://localhost:4601/signin-oidc"},
 
                 AllowedGrantTypes = GrantTypes.Code,
                 AllowedScopes =
@@ -49,7 +49,8 @@ namespace IdentityServer.Utilities
                     "ApiTwo", 
                     IdentityServer4.IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServer4.IdentityServerConstants.StandardScopes.Profile,
-                    "rc.grandma"
+                    "rc.grandma",
+                    "rc.scope"
                 },
                 RequireConsent = false,
                 

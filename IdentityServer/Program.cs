@@ -19,6 +19,7 @@ namespace IdentityServer
                 userManager.CreateAsync(user, "pass123").GetAwaiter().GetResult();
                 //optional
                 userManager.AddClaimAsync(user, new Claim("rc.grandma", "big.cookie")).GetAwaiter().GetResult();
+                userManager.AddClaimAsync(user, new Claim("rc.apione.grandma", "big.apione.cookie")).GetAwaiter().GetResult();
             }     
 
             host.Run();

@@ -41,13 +41,13 @@ namespace WebClient.Controllers
         public async Task<string> GetSecret(string accessToken)
         {
             var apiClient = _httpClientFactory.CreateClient();
-
+        
             apiClient.SetBearerToken(accessToken);
-
-            var response = await apiClient.GetAsync("https://localhost:44372/secret");
-
+        
+            var response = await apiClient.GetAsync("https://localhost:4001/secret");
+        
             var content = await response.Content.ReadAsStringAsync();
-
+        
             return content;
         }
     }

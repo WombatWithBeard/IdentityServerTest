@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,11 +31,23 @@ namespace WebClient
                     config.ClientSecret = "client_secret_mvc";
                     config.SaveTokens = true;
                     config.ResponseType = "code";
+
+                    //configure cookie claims
+                    config.ClaimActions.DeleteClaims("amr");
+                    config.ClaimActions.MapUniqueJsonKey("RawCoding.Grandma", "rc.grandma");
+                    
+                    //another round to load claims in to the cookie, but id token is smaller
+                    config.GetClaimsFromUserInfoEndpoint = true;
                     
                     //configure scope
+                    config.Scope.Clear();
+                    config.Scope.Add("openid");
                     config.Scope.Add("rc.scope");
+                    config.Scope.Add("ApiOne");
                 });
 
+            services.AddHttpClient();
+            
             services.AddControllersWithViews();
         }
 

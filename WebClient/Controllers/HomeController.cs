@@ -1,5 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http;
 using System.Threading.Tasks;
+using IdentityModel.Client;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +10,13 @@ namespace WebClient.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public HomeController(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -24,7 +33,22 @@ namespace WebClient.Controllers
             var _accessToken = new JwtSecurityTokenHandler().ReadJwtToken(accessToken);
             var _idToken = new JwtSecurityTokenHandler().ReadJwtToken(idToken);
 
+            var result = await GetSecret(accessToken);
+            
             return View();
+        }
+
+        public async Task<string> GetSecret(string accessToken)
+        {
+            var apiClient = _httpClientFactory.CreateClient();
+
+            apiClient.SetBearerToken(accessToken);
+
+            var response = await apiClient.GetAsync("https://localhost:44372/secret");
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            return content;
         }
     }
 }

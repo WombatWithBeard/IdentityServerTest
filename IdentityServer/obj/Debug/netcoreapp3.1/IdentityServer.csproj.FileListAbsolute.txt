@@ -60,6 +60,5 @@ C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcor
 C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcoreapp3.1\IdentityServer.RazorTargetAssemblyInfo.cs
 C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcoreapp3.1\IdentityServer.Views.pdb
 C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
-C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\bin\Debug\netcoreapp3.1\IdentityServer4.AspNetIdentity.dll
 C:\Users\rusrob\RiderProjects\IdentityServerTest\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs

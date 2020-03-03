@@ -96,9 +96,6 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
         </e>
-        <e p="Models" t="Include">
-          <e p="ErrorViewModel.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -122,7 +119,6 @@
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-            <e p="Error.cshtml" t="Include" />
           </e>
         </e>
         <e p="WebClient.csproj" t="IncludeRecursive" />

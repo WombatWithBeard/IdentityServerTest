@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiOne.Controllers
@@ -10,6 +11,8 @@ namespace ApiOne.Controllers
         [Authorize]
         public string Index()
         {
+            var claims = User.Claims.ToList();
+            
             return "Message from ApiOne";
         }
     }

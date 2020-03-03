@@ -36,7 +36,7 @@ namespace ApiTwo.Controllers
 
             apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-            var response = await apiClient.GetAsync("http://localhost:48078/secret");
+            var response = await apiClient.GetAsync("https://localhost:44372/secret");
 
             var content = await response.Content.ReadAsStringAsync();
             

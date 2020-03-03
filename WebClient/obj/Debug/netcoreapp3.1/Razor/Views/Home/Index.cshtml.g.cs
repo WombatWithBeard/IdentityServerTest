@@ -19,8 +19,20 @@ using WebClient;
 #line default
 #line hidden
 #nullable disable
+<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"02010302d56e16291f01dbed2f417256c01e0a9b", @"/Views/Home/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43577db6d85de604210dae477d36e0ee82fa0a8a", @"/Views/_ViewImports.cshtml")]
+=======
+#nullable restore
+#line 2 "C:\Users\rusrob\RiderProjects\IdentityServerTest\WebClient\Views\_ViewImports.cshtml"
+using WebClient.Models;
+
+#line default
+#line hidden
+#nullable disable
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"02010302d56e16291f01dbed2f417256c01e0a9b", @"/Views/Home/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"74eabcf7e030352eff2473b217adffa5ad5752fa", @"/Views/_ViewImports.cshtml")]
+>>>>>>> origin/master
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<object>
     {
         #pragma warning disable 1998

@@ -6,6 +6,7 @@
     <e p="C:\Users\rusrob\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\rusrob\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IdentityServerTest.-929700454.00" t="ExcludeRecursive" />
     <e p="C:\Users\rusrob\RiderProjects\IdentityServerTest" t="IncludeFlat">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="ApiOne" t="IncludeRecursive">
         <e p="ApiOne.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />

@@ -59,6 +59,19 @@ namespace IdentityServer.Utilities
                 
                 //added for refresh token
                 AllowOfflineAccess = true
+            },
+            new Client
+            {
+                ClientId = "client_id_js",
+                RedirectUris = {"https://localhost:5501/signin"},
+                AllowedGrantTypes = GrantTypes.Implicit,
+                AllowedScopes =
+                {
+                    IdentityServer4.IdentityServerConstants.StandardScopes.OpenId,
+                    "ApiOne"
+                },
+                AllowAccessTokensViaBrowser = true,
+                RequireConsent = false
             }
         };
     }

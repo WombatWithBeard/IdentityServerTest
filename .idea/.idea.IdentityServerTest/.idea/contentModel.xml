@@ -112,10 +112,13 @@
         <e p="Views" t="Include">
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
-            <e p="Index.cshtml.cs" t="Include" />
+            <e p="SignIn.cshtml" t="Include" />
           </e>
         </e>
-        <e p="wwwroot" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="extract-tokens.js" t="Include" />
+          <e p="sign-in.js" t="Include" />
+        </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="WebClient" t="IncludeRecursive">

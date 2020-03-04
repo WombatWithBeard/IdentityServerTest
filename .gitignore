@@ -3,3 +3,5 @@
 ApiOne/obj/Debug/netcoreapp3.1/ApiOne.csprojAssemblyReference.cache
 WebClient/obj/Debug/netcoreapp3.1/WebClient.csprojAssemblyReference.cache
 *.pdb
+*.dll
+*.pdb

@@ -44,6 +44,9 @@ namespace WebClient
                     config.Scope.Add("openid");
                     config.Scope.Add("rc.scope");
                     config.Scope.Add("ApiOne");
+                    
+                    //added for refresh token
+                    config.Scope.Add("offline_access");
                 });
 
             services.AddHttpClient();

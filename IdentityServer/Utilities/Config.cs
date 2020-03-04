@@ -56,6 +56,9 @@ namespace IdentityServer.Utilities
                 
                 //optional. - put all the claims in the id token
                 // AlwaysIncludeUserClaimsInIdToken = true
+                
+                //added for refresh token
+                AllowOfflineAccess = true
             }
         };
     }

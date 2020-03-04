@@ -39,6 +39,8 @@ namespace WebClient.Controllers
 
             var result = await GetSecret(accessToken);
 
+            await RefreshAccessToken();
+            
             return View();
         }
 
@@ -60,44 +62,25 @@ namespace WebClient.Controllers
             var serverClient = _httpClientFactory.CreateClient();
             var discoveryDocument = await serverClient.GetDiscoveryDocumentAsync("https://localhost:4501/");
 
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+            var idToken = await HttpContext.GetTokenAsync("id_token");
             var refreshToken = await HttpContext.GetTokenAsync("refresh_token");
             var refreshTokenClient = _httpClientFactory.CreateClient();
 
-            refreshTokenClient.RequestRefreshTokenAsync(new RefreshTokenRequest
+            var tokenResponse = await refreshTokenClient.RequestRefreshTokenAsync(new RefreshTokenRequest
             {
+                Address = discoveryDocument.TokenEndpoint,
                 RefreshToken = refreshToken,
-                
+                ClientId = "client_id_mvc",
+                ClientSecret = "client_secret_mvc"
             });
-            
-            var requestData = new Dictionary<string, string>
-            {
-                {"grant_type", "refresh_token"},
-                {"refresh_token", refreshToken}
-            };
 
-            var request = new HttpRequestMessage(HttpMethod.Post, "")
-            {
-                Content = new FormUrlEncodedContent(requestData)
-            };
+            var authInfo = await HttpContext.AuthenticateAsync("Cookie");
+            authInfo.Properties.UpdateTokenValue("access_token", tokenResponse.AccessToken);
+            authInfo.Properties.UpdateTokenValue("id_token", tokenResponse.IdentityToken); //useless ofcourse
+            authInfo.Properties.UpdateTokenValue("refresh_token", tokenResponse.RefreshToken);
 
-            var basicCredentials = "username:password";
-            var encodedCredentials = Encoding.UTF8.GetBytes(basicCredentials);
-            var base64Credentials = Convert.ToBase64String(encodedCredentials);
-
-            request.Headers.Add("Authorization", $"Basic {base64Credentials}");
-
-            var response = await refreshTokenClient.SendAsync(request);
-            var responseString = await response.Content.ReadAsStringAsync();
-            var responseData = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseString);
-
-            var newAccessToken = responseData.GetValueOrDefault("access_token");
-            var newRefreshToken = responseData.GetValueOrDefault("refresh_token");
-
-            var authInfo = await HttpContext.AuthenticateAsync("ClientCookie");
-            authInfo.Properties.UpdateTokenValue("access_token", newAccessToken);
-            authInfo.Properties.UpdateTokenValue("refresh_token", newRefreshToken);
-            
-            
+            await HttpContext.SignInAsync("Cookie", authInfo.Principal, authInfo.Properties);
         }
     }
 }

@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiOne", "ApiOne\ApiOne.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTwo", "ApiTwo\ApiTwo.csproj", "{1DF5D565-3118-46A5-939C-6F55A52FF92C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptClient", "JavaScriptClient\JavaScriptClient.csproj", "{B1EBC51C-30AA-41B4-9E73-90FD7BADA4FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{1DF5D565-3118-46A5-939C-6F55A52FF92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DF5D565-3118-46A5-939C-6F55A52FF92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DF5D565-3118-46A5-939C-6F55A52FF92C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1EBC51C-30AA-41B4-9E73-90FD7BADA4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1EBC51C-30AA-41B4-9E73-90FD7BADA4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1EBC51C-30AA-41B4-9E73-90FD7BADA4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1EBC51C-30AA-41B4-9E73-90FD7BADA4FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

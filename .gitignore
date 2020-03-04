@@ -1,5 +1,10 @@
 ﻿.idea/.idea.IdentityServerTest/.idea/contentModel.xml
 ApiOne/obj/Debug/netcoreapp3.1/ApiOne.csprojAssemblyReference.cache
 WebClient/obj/Debug/netcoreapp3.1/WebClient.csprojAssemblyReference.cache
+ApiOne/bin
+ApiTwo/bin
+IdentityServer/bin
+JavaScriptClient/bin
+WebClient/bin
 *.pdb
 *.dll

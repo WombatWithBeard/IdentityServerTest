@@ -48,6 +48,41 @@
         </e>
         <e p="Startup.cs" t="Include" />
       </e>
+      <e p="EsiaClient" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="Esia" t="Include">
+          <e p="EsiaModel.cs" t="Include" />
+        </e>
+        <e p="EsiaClient.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="EsiaClient.AssemblyInfo.cs" t="Include" />
+              <e p="EsiaClient.RazorAssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="Home" t="Include">
+            <e p="GetEsiaResponse.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="esia-response.js" t="Include" />
+          <e p="sign-in-esia.js" t="Include" />
+        </e>
+      </e>
       <e p="IdentityServer" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
